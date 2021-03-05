@@ -6,7 +6,7 @@ var food;
 function preload(){
   sadDog=loadImage("Dog.png");
   happyDog=loadImage("happy dog.png");
-  emptyMilk = loadImage("milkImage.png");
+ // emptyMilk = loadImage("milkImage.png");
 }
 
 function setup() {
@@ -37,10 +37,6 @@ function draw() {
   dog.display()
   milk.display()
 
- /* if(feed.mousePressed(feedDog)){
-    dog.addImage(sadDog)
-  }*/
- 
   fedTime = database.ref('FeedTime');
   fedTime.on("value",function(data){
   lastFed = data.val();
